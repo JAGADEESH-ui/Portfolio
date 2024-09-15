@@ -1,0 +1,15 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+	.content-container {
+		@apply max-w-[1440px] w-full mx-auto px-5 md:px-20;
+	}
+}
+
+@layer utilities {
+	.custom-font-family {
+		@apply font-poppins;
+	}
+}
