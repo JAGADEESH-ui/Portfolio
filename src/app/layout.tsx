@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Caveat, Bricolage_Grotesque } from "next/font/google";
 import "../styles/global.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const poppins = Poppins({
 	subsets: ["latin"],
@@ -50,6 +52,8 @@ export default function RootLayout({
 				className={`${inter.variable} ${poppins.variable} ${caveat.variable} ${bricolage_grotesque.variable}`}
 			>
 				{children}
+				<Analytics />
+				<SpeedInsights />
 			</body>
 		</html>
 	);
